@@ -173,9 +173,9 @@ async def main(args):
             elif option == "1":
                 log_status("#13 Issue credential offer to X")
 
-				if herding_agent.aip == 10:
+                if herding_agent.aip == 10:
                     # define attributes to send for credential
-					 herding_agent.agent.cred_attrs[herding_agent.cred_def_id] = {
+                    herding_agent.agent.cred_attrs[herding_agent.cred_def_id] = {
                     "name": "Alice Smith",
                     "date": "2018-05-28",
                     "degree": "Maths",
