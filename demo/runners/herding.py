@@ -194,7 +194,7 @@ async def main(args):
                 }
                 offer_request = {
                     "connection_id": herding_agent.agent.connection_id,
-					"cred_def_id": herding_agent.cred_def_id,
+                    "cred_def_id": herding_agent.cred_def_id,
                     "comment": f"Offer on cred def id {herding_agent.cred_def_id}",
                     "auto_remove": False,
                     "credential_preview": cred_preview,
