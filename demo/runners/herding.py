@@ -176,28 +176,28 @@ async def main(args):
                 if herding_agent.aip == 10:
                     # define attributes to send for credential
                     herding_agent.agent.cred_attrs[herding_agent.cred_def_id] = {
-                    "name": "Alice Smith",
-                    "date": "2018-05-28",
-                    "degree": "Maths",
-                    "age": "24",
-                    "timestamp": str(int(time.time())),
-                }
+                        "name": "Alice Smith",
+                        "date": "2018-05-28",
+                        "degree": "Maths",
+                        "age": "24",
+                        "timestamp": str(int(time.time())),
+                    }
 
-                cred_preview = {
-                    "@type": CRED_PREVIEW_TYPE,
-                    "attributes": [
-                        {"name": n, "value": v}
-                        for (n, v) in herding_agent.agent.cred_attrs[
-                            herding_agent.cred_def_id
-                        ].items()
-                    ],
-                }
-                offer_request = {
-                    "connection_id": herding_agent.agent.connection_id,
-                    "cred_def_id": herding_agent.cred_def_id,
-                    "comment": f"Offer on cred def id {herding_agent.cred_def_id}",
-                    "auto_remove": False,
-                    "credential_preview": cred_preview,
+                    cred_preview = {
+                        "@type": CRED_PREVIEW_TYPE,
+                        "attributes": [
+                            {"name": n, "value": v}
+                            for (n, v) in herding_agent.agent.cred_attrs[
+                                herding_agent.cred_def_id
+                            ].items()
+                        ],
+                    }
+                    offer_request = {
+                        "connection_id": herding_agent.agent.connection_id,
+                        "cred_def_id": herding_agent.cred_def_id,
+                        "comment": f"Offer on cred def id {herding_agent.cred_def_id}",
+                        "auto_remove": False,
+                        "credential_preview": cred_preview,
                         "trace": exchange_tracing,
                     }
                     await herding_agent.agent.admin_POST(
