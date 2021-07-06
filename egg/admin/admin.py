@@ -1,9 +1,20 @@
+
+from ..common.agent import EggAgent
+
+class AdminAgent(EggAgent):
+    def __init__(self) -> None:
+        pass
+
+    
+
 async def main(args):
     #初始化agent，启动各个网口监听
 
+    #产生一个进程，邀请generate_invitation，然后放置后台一直运行，如果接收到链接请求，则进行处理。
+
+    #链接管理
 
 
-    #产生邀请generate_invitation
 
     pass
 

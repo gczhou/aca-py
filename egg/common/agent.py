@@ -1,5 +1,5 @@
 
-class BaseAgent:
+class EggAgent:
     def __init__(
         self,
         http_port: int,

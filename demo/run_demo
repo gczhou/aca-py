@@ -141,12 +141,8 @@ elif [ "$AGENT" = "performance" ]; then
   AGENT_MODULE="performance"
   AGENT_PORT=8050
   AGENT_PORT_RANGE=8050-8068
-elif [ "$AGENT" = "herding" ]; then
-  AGENT_MODULE="herding"
-  AGENT_PORT=8070
-  AGENT_PORT_RANGE=8070-8077
 else
-  echo "Please specify which agent you want to run. Choose from 'faber', 'alice', 'acme', 'herding' , or 'performance'."
+  echo "Please specify which agent you want to run. Choose from 'faber', 'alice', 'acme', or 'performance'."
   exit 1
 fi
 
